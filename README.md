@@ -1,4 +1,4 @@
-# Stopwatch & Timer Apps
+# Stopwatch & Timer Web Application
 
 ## Description
 Simple stopwatch & timer app built with vanilla JavaScript to help track time easily.
