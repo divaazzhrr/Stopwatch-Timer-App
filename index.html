@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stylish Timer App</title>
+
+  <!-- CSS & Font -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- STOPWATCH VIEW -->
+  <div class="container stopwatch-container">
+    <h1> Stopwatch & Timer App</h1>
+
+    <!-- Mode Switch & Dark Toggle -->
+    <div class="top-bar">
+      <button id="btnStopwatch" onclick="showStopwatch()">Stopwatch</button>
+      <button id="btnTimer" onclick="showTimer()">Timer</button>
+
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span class="mode-label">🌙 Dark Mode</span>
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Dino Animation -->
+    <div class="video-container">
+      <img src="assets/dino.gif" alt="dino animation" class="dino-anim" />
+    </div>
+
+    <!-- Stopwatch Display -->
+    <div id="timer">00:00:00</div>
+
+    <!-- Stopwatch Buttons -->
+    <div class="buttons">
+      <button class="start" onclick="startTimer()">Start</button>
+      <button class="pause" onclick="pauseTimer()">Pause</button>
+      <button class="reset" onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
+
+  <!-- TIMER CIRCLE VIEW -->
+  <div class="container circle-view" style="display:none">
+    <div class="top-bar">
+      <button onclick="showStopwatch()">Stopwatch</button>
+      <button onclick="showTimer()">Timer</button>
+    </div>
+
+    <!-- Timer Progress Ring -->
+    <div class="progress-ring">
+      <svg width="180" height="180">
+        <circle r="80" cx="90" cy="90" stroke="#cce0ff" stroke-width="10" fill="none"/>
+        <circle id="progressCircle" r="80" cx="90" cy="90" stroke="#0b65d8" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="502" stroke-dashoffset="502"/>
+      </svg>
+      <div class="circle-time" id="circleTime">00:00</div>
+    </div>
+
+    <!-- Timer Presets -->
+    <div class="presets">
+      <button onclick="setPreset(5)">5:00</button>
+      <button onclick="setPreset(15)">15:00</button>
+      <button onclick="setPreset(30)">30:00</button>
+    </div>
+
+    <!-- Timer Buttons -->
+    <div class="circle-buttons">
+      <button class="start" onclick="startCircleTimer()">Start</button>
+      <button class="pause" onclick="pauseCircleTimer()">Pause</button>
+      <button class="reset" onclick="resetCircleTimer()">Reset</button>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
