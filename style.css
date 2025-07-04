@@ -32,7 +32,6 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* TIMER & STOPWATCH DISPLAY */
 #timer,
 .circle-time {
   font-size: 44px;
@@ -174,7 +173,6 @@ body.dark .presets button:hover {
   background-color: rgba(255,255,255,0.2);
 }
 
-/* CIRCLE TIMER */
 .circle-view {
   display: flex;
   flex-direction: column;
@@ -296,7 +294,6 @@ body.dark .active-mode {
   color: #fff !important;
 }
 
-/* === POSISI TOP-BAR TAMPAK DINO (stopwatch-container) === */
 .stopwatch-container .top-bar {
   display: flex;
   justify-content: flex-start; /* kiri */
@@ -305,18 +302,18 @@ body.dark .active-mode {
   margin-bottom: 15px;
 }
 
-/* bikin dark mode sejajar */
+
 .stopwatch-container .mode-toggle {
   display: flex;
   align-items: center;
-  margin-left: 10px; /* jarak antara tombol & dark mode */
+  margin-left: 10px; 
 }
 
 .stopwatch-container .mode-toggle .mode-label {
   margin-right: 2px;
 }
 
-/* === POSISI TOP-BAR TAMPILAN RING (circle-view) === */
+
 .circle-view .top-bar {
   display: flex;
   justify-content: flex-start; /* kiri */
@@ -324,7 +321,6 @@ body.dark .active-mode {
   margin-bottom: 15px;
 }
 
-/* === PAKSAIN TOMBOL TIMER & STOPWATCH TAMPILAN RING KE POJOK KIRI === */
 .circle-view {
   display: flex;
   flex-direction: column;
